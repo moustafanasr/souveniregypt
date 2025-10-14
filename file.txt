@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUVENIR - Authentic Egyptian Handcraft</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+    <style>
+      :root {
+        --deep-teal: #0D6B75;
+        --desert-gold: #D7A34A;
+        --sand-beige: #F3E7D3;
+        --dark-blue: #0A3E63;
+        --text-dark: #333333;
+        --text-light: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+        background-color: var(--sand-beige);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /* Section Separator */
+      .section-separator {
+        border: 0;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--desert-gold), transparent);
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      /* Header Styles */
+      header {
+        background-color: var(--dark-blue);
+        color: var(--text-light);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--desert-gold);
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 1.5rem;
+      }
+
+      nav ul li a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: var(--desert-gold);
+      }
+
+      .mobile-menu {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--desert-gold);
+      }
+
+      /* Hero Section */
+      .hero {
+        background-image: linear-gradient(90deg, rgba(99, 75, 10, 0.85) 0%, rgba(99, 71, 10, 0.7) 50%, rgba(99, 71, 10, 0.3) 100%), url('./assets/img/heroBagckground.jpg');
+        background-repeat: no-repeat;
+        background-position: 0% 15%;
+        background-size: 120%;
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        margin-top: 70px;
+        padding-bottom: 85px;
+      }
+
+      .hero-content {
+        width: 100%;
+        max-width: 1300px;
+      }
+
+      .hero-text {
+        max-width: 600px;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        margin-bottom: 1rem;
+        font-weight: 400;
+        color: var(--dark-blue);
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        color: var(--dark-blue);
+      }
+
+      .brand-tagline {
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: var(--dark-blue);
+      }
+
+      .hero-tagline {
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+        color: var(--dark-blue);
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s;
+        margin-right: 15px;
+        margin-bottom: 10px;
+      }
+
+      .btn-primary {
+        background-color: var(--desert-gold);
+        color: var(--dark-blue);
+      }
+
+      .btn-primary:hover {
+        background-color: #c08c3a;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(215, 163, 74, 0.3);
+      }
+
+      .btn-secondary {
+        border: 2px solid var(--desert-gold);
+        color: var(--dark-blue);
+      }
+
+      .btn-secondary:hover {
+        background-color: rgba(215, 163, 74, 0.1);
+        transform: translateY(-3px);
+      }
+
+      /* Product Categories */
+      .categories {
+        padding: 5rem 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.2rem;
+        color: var(--dark-blue);
+      }
+
+      .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+      }
+
+      .category-card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        border-top: 4px solid var(--deep-teal);
+      }
+
+      .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .category-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        border: 2px solid var(--desert-gold);
+      }
+
+      .category-card h3 {
+        color: var(--deep-teal);
+        font-size: 1.1rem;
+      }
+
+      /* Delivery Promise */
+      .delivery {
+        background-color: var(--dark-blue);
+        padding: 3rem 0;
+        text-align: center;
+        color: white;
+      }
+
+      .delivery p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .delivery a {
+        color: var(--desert-gold);
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid var(--desert-gold);
+        transition: color 0.3s;
+      }
+
+      .delivery a:hover {
+        color: var(--sand-beige);
+        border-color: var(--sand-beige);
+      }
+
+      /* Artisans Section */
+      .artisans {
+        padding: 5rem 0;
+      }
+
+      .artisans-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .artisan-card {
+        text-align: center;
+        background-color: white;
+        padding: 2rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .artisan-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1rem;
+        border: 3px solid var(--desert-gold);
+      }
+
+      .artisan-name {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--dark-blue);
+      }
+
+      .artisan-bio {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .center-btn {
+        text-align: center;
+      }
+
+      /* Guarantee Section */
+      .guarantee {
+        padding: 5rem 0;
+      }
+
+      .guarantee-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .guarantee-card {
+        text-align: center;
+        padding: 2rem 1rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-top: 4px solid var(--deep-teal);
+      }
+
+      .guarantee-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--deep-teal);
+      }
+
+      .guarantee-title {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--dark-blue);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark-blue);
+        color: var(--text-light);
+        padding: 3rem 0 1rem;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--desert-gold);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .hero {
+          background-image: linear-gradient(90deg, rgba(99, 75, 10, 0.85) 0%, rgba(99, 71, 10, 0.7) 50%, rgba(99, 71, 10, 0.3) 100%), url(./assets/img/heroBagckground.jpg);
+          background-repeat: no-repeat;
+          background-position: 0% 8%;
+          background-size: 100%;
+        }
+
+        .categories-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .artisans-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-links {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .hero-text {
+          max-width: 80%;
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .brand-tagline {
+          font-size: 1.4rem;
+        }
+
+        .hero-tagline {
+          font-size: 1.1rem;
+          padding: 0 1rem;
+        }
+
+        .guarantee-grid {
+          grid-template-columns: 1fr;
+        }
+
+        nav ul {
+          display: none;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background-color: var(--dark-blue);
+          flex-direction: column;
+          padding: 1rem 0;
+          text-align: center;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul.show {
+          display: flex;
+        }
+
+        nav ul li {
+          margin: 0.5rem 0;
+        }
+
+        .mobile-menu {
+          display: block;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .categories-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .artisans-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-links {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero .btn {
+          display: block;
+          margin: 10px auto;
+          width: 80%;
+        }
+
+        .hero-text {
+          max-width: 90%;
+          padding: 1.5rem;
+        }
+
+        .category-image {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <div class="logo">SOUVENIR EGYPT.STORE</div>
+        <nav>
+          <div class="mobile-menu">☰</div>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#artisans">Artisans</a></li>
+            <li><a href="#guarantee">Guarantee</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h2>SHOP AUTHENTIC</h2>
+          <h1>Egyptian Handcrafts</h1>
+          <div class="brand-tagline">SOUVENIR, AUTHENTIC Egyptian Handcraft</div>
+          <p class="hero-tagline">Bring a piece of authentic Egyptian Handcraft to your home. Handmade with love by
+            Egyptian artisans.</p>
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-primary">SHOP NOW</a>
+            <a href="#artisans" class="btn btn-secondary">MEET THE ARTISANS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Product Categories -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <h2 class="section-title">Our Collections</h2>
+        <div class="categories-grid">
+          <div class="category-card">
+            <img src="./assets/img/jewelry.jpeg" alt="Jewelry" class="category-image">
+            <h3>Jewelry</h3>
+          </div>
+          <div class="category-card">
+            <img src="./assets/img/pottery.png" alt="Pottery" class="category-image">
+            <h3>Pottery</h3>
+          </div>
+          <div class="category-card">
+            <img src="./assets/img/leather.png" alt="Leather Products" class="category-image">
+            <h3>Leather Products</h3>
+          </div>
+          <div class="category-card">
+            <img src="./assets/img/Kilimandcarpet.png" alt="Rugs & Kilims" class="category-image">
+            <h3>Rugs & Kilims</h3>
+          </div>
+          <div class="category-card">
+            <img src="./assets/img/fashion.jpg" alt="Egyptian Cotton" class="category-image">
+            <h3>Egyptian Cotton</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Delivery Promise -->
+    <section class="delivery">
+      <div class="container">
+        <p>WILL BE DELIVERED TO YOUR HOTEL OF YOUR STAY IN EGYPT OR SHIPPED HOME • CAN BE ORDERED AS A GIFT</p>
+        <a href="#">VIEW SHIPPING OPTIONS & DETAILS →</a>
+      </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Artisans Section -->
+    <section class="artisans" id="artisans">
+      <div class="container">
+        <h2 class="section-title">MEET THE ARTISANS</h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem; color: var(--deep-teal);">
+          Handcrafted with Heart</p>
+        <div class="artisans-grid">
+          <div class="artisan-card">
+            <img
+              src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Ahmed Hassan" class="artisan-img">
+            <h3 class="artisan-name">Ahmed Hassan</h3>
+            <p class="artisan-bio">Master jeweler with 25 years of experience creating intricate gold and silver pieces
+              inspired by ancient Egyptian designs.</p>
+          </div>
+          <div class="artisan-card">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Fatima Ali" class="artisan-img">
+            <h3 class="artisan-name">Fatima Ali</h3>
+            <p class="artisan-bio">Textile artist specializing in handwoven Egyptian cotton and traditional embroidery
+              techniques passed down through generations.</p>
+          </div>
+          <div class="artisan-card">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Mohamed Ibrahim" class="artisan-img">
+            <h3 class="artisan-name">Mohamed Ibrahim</h3>
+            <p class="artisan-bio">Pottery master creating beautiful clay vessels using techniques dating back to
+              ancient Egyptian civilizations.</p>
+          </div>
+        </div>
+        <div class="center-btn">
+          <a href="#" class="btn btn-primary">Read Their Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Guarantee Section -->
+    <section class="guarantee" id="guarantee">
+      <div class="container">
+        <h2 class="section-title">SOUVENIR EGYPT STORE GUARANTEE</h2>
+        <div class="guarantee-grid">
+          <div class="guarantee-card">
+            <div class="guarantee-icon">✓</div>
+            <h3 class="guarantee-title">Quality Handmade</h3>
+            <p>Authentic crafts made with centuries-old techniques.</p>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon">🌍</div>
+            <h3 class="guarantee-title">International Shipping</h3>
+            <p>We deliver our treasures worldwide.</p>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon">🎁</div>
+            <h3 class="guarantee-title">Perfect Gift Idea</h3>
+            <p>A unique and memorable present for loved ones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <h3 style="text-align: center; margin-bottom: 2rem; color: var(--desert-gold);">HELPFUL LINKS</h3>
+        <div class="footer-links">
+          <a href="#shop">SHOP</a>
+          <a href="#contact">CONTACT</a>
+          <a href="#">FAQs</a>
+          <a href="#">Terms</a>
+          <a href="#">Shipping</a>
+          <a href="#">VISA</a>
+        </div>
+        <div class="copyright">
+          <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document.querySelector('.mobile-menu').addEventListener('click', function () {
+        document.querySelector('nav ul').classList.toggle('show');
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 70,
+              behavior: 'smooth'
+            });
+
+            // Close mobile menu if open
+            document.querySelector('nav ul').classList.remove('show');
+          }
+        });
+      });
+    </script>
+  </body>
+
+</html>
