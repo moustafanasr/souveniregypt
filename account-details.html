@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details - SOUVENIR EGYPT STORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/account.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+</head>
+<body>
+    <!-- Header -->
+
+    <!-- Account Details Section -->
+    <section class="account-section">
+        <div class="container">
+            <div class="account-layout">
+                <!-- Sidebar Navigation (Same as my-account.html) -->
+
+                <!-- Main Content -->
+                <main class="account-content">
+                    <div class="account-header">
+                        <h1>Account Details</h1>
+                        <p>Manage your personal information and password</p>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="details-section">
+                        <h2>Personal Information</h2>
+                        <form class="details-form" id="personalInfoForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" value="John" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" value="Doe" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                                <p class="form-help">You will need to verify any changes to your email address.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="birthdate">Date of Birth</label>
+                                <input type="date" id="birthdate" name="birthdate" value="1990-01-15">
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-outline" id="cancelPersonal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Password Change -->
+                    <div class="details-section">
+                        <h2>Change Password</h2>
+                        <form class="details-form" id="passwordForm">
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" name="currentPassword" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" name="newPassword" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <div class="password-strength">
+                                    <div class="strength-bar">
+                                        <div class="strength-fill" data-strength="0"></div>
+                                    </div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm New Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Communication Preferences -->
+                    <div class="details-section">
+                        <h2>Communication Preferences</h2>
+                        <form class="preferences-form" id="preferencesForm">
+                            <div class="preferences-group">
+                                <h3>Email Notifications</h3>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="orderUpdates" checked>
+                                    <span class="checkmark"></span>
+                                    Order updates and shipping notifications
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="promotions" checked>
+                                    <span class="checkmark"></span>
+                                    Promotions, discounts, and special offers
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="newsletter" checked>
+                                    <span class="checkmark"></span>
+                                    Newsletter with artisan stories and new arrivals
+                                </label>
+                            </div>
+
+                            <div class="preferences-group">
+                                <h3>SMS Notifications</h3>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="smsOrderUpdates">
+                                    <span class="checkmark"></span>
+                                    Order and delivery updates via SMS
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="smsPromotions">
+                                    <span class="checkmark"></span>
+                                    Exclusive SMS offers and promotions
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Account Management -->
+                    <div class="details-section danger-zone">
+                        <h2>Account Management</h2>
+                        <div class="danger-actions">
+                            <div class="danger-action">
+                                <div class="danger-info">
+                                    <h4>Download Your Data</h4>
+                                    <p>Download a copy of your personal data and order history.</p>
+                                </div>
+                                <button class="btn btn-outline" id="downloadData">
+                                    <i class="fas fa-download"></i>
+                                    Download Data
+                                </button>
+                            </div>
+
+                            <div class="danger-action">
+                                <div class="danger-info">
+                                    <h4>Deactivate Account</h4>
+                                    <p>Temporarily deactivate your account. You can reactivate it anytime by logging in.</p>
+                                </div>
+                                <button class="btn btn-warning" id="deactivateAccount">
+                                    <i class="fas fa-user-slash"></i>
+                                    Deactivate Account
+                                </button>
+                            </div>
+
+                            <div class="danger-action">
+                                <div class="danger-info">
+                                    <h4>Delete Account</h4>
+                                    <p>Permanently delete your account and all associated data. This action cannot be undone.</p>
+                                </div>
+                                <button class="btn btn-danger" id="deleteAccount">
+                                    <i class="fas fa-trash"></i>
+                                    Delete Account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modals -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalConfirmTitle">Confirm Action</h3>
+                <button class="modal-close" id="modalConfirmClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="modalConfirmMessage">Are you sure you want to perform this action?</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" id="modalCancel">Cancel</button>
+                <button class="btn btn-danger" id="modalConfirm">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/account-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Addresses - SOUVENIR EGYPT STORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/account.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+</head>
+<body>
+    <!-- Header -->
+
+    <!-- Addresses Section -->
+    <section class="account-section">
+        <div class="container">
+            <div class="account-layout">
+                <!-- Sidebar Navigation (Same as my-account.html) -->
+
+                <!-- Main Content -->
+                <main class="account-content">
+                    <div class="account-header">
+                        <h1>My Addresses</h1>
+                        <p>Manage your shipping and billing addresses</p>
+                    </div>
+
+                    <!-- Addresses Grid -->
+                    <div class="addresses-grid">
+                        <!-- Shipping Address -->
+                        <div class="address-card default-address">
+                            <div class="address-header">
+                                <h3>Shipping Address</h3>
+                                <span class="default-badge">Default</span>
+                            </div>
+                            <div class="address-details">
+                                <p><strong>John Doe</strong></p>
+                                <p>123 Main Street</p>
+                                <p>Apartment 4B</p>
+                                <p>New York, NY 10001</p>
+                                <p>United States</p>
+                                <p class="address-phone">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 123-4567
+                                </p>
+                            </div>
+                            <div class="address-actions">
+                                <button class="btn btn-outline edit-address">
+                                    <i class="fas fa-edit"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-outline remove-address">
+                                    <i class="fas fa-trash"></i>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Billing Address -->
+                        <div class="address-card">
+                            <div class="address-header">
+                                <h3>Billing Address</h3>
+                            </div>
+                            <div class="address-details">
+                                <p><strong>John Doe</strong></p>
+                                <p>456 Business Ave</p>
+                                <p>Suite 200</p>
+                                <p>New York, NY 10002</p>
+                                <p>United States</p>
+                                <p class="address-phone">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 987-6543
+                                </p>
+                            </div>
+                            <div class="address-actions">
+                                <button class="btn btn-outline set-default">
+                                    <i class="fas fa-star"></i>
+                                    Set Default
+                                </button>
+                                <button class="btn btn-outline edit-address">
+                                    <i class="fas fa-edit"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-outline remove-address">
+                                    <i class="fas fa-trash"></i>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Add New Address Card -->
+                        <div class="address-card add-new-card">
+                            <div class="add-new-content">
+                                <i class="fas fa-plus-circle"></i>
+                                <h3>Add New Address</h3>
+                                <p>Add a new shipping or billing address</p>
+                                <button class="btn btn-primary" id="addAddressBtn">
+                                    Add Address
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Delivery Address -->
+                    <div class="hotel-delivery-section">
+                        <h2>Hotel Delivery Address</h2>
+                        <div class="hotel-address-card">
+                            <div class="hotel-info">
+                                <i class="fas fa-hotel"></i>
+                                <div>
+                                    <h4>Nile Ritz Carlton</h4>
+                                    <p>1113 Corniche El Nil, Cairo 11221, Egypt</p>
+                                    <p class="delivery-note">
+                                        <i class="fas fa-info-circle"></i>
+                                        Your order will be delivered to the hotel concierge
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="stay-dates">
+                                <p><strong>Stay Dates:</strong> Jan 20 - Jan 25, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add/Edit Address Modal -->
+    <div class="modal" id="addressModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add New Address</h3>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="address-form" id="addressForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="addressType">Address Type</label>
+                        <select id="addressType" name="addressType" required>
+                            <option value="shipping">Shipping Address</option>
+                            <option value="billing">Billing Address</option>
+                            <option value="both">Both Shipping & Billing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="setDefault" name="setDefault">
+                            <span class="checkmark"></span>
+                            Set as default address
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="streetAddress">Street Address</label>
+                    <input type="text" id="streetAddress" name="streetAddress" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apartment">Apartment, Suite, etc. (Optional)</label>
+                    <input type="text" id="apartment" name="apartment">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State/Province</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="zipCode">ZIP/Postal Code</label>
+                        <input type="text" id="zipCode" name="zipCode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="EG">Egypt</option>
+                            <!-- Add more countries -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Address</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/addresses.js"></script>
+</body>
+</html>

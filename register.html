@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - SOUVENIR EGYPT STORE</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-text">SOUVENIR EGYPT.STORE</span>
+            <span class="logo-subtitle">Authentic Handcrafts</span>
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index2.html" data-key="nav.home" class="nav-link">Home</a></li>
+            <li><a href="shop.html" data-key="nav.collections" class="nav-link">Collections</a></li>
+            <li><a href="artisans.html" data-key="nav.artisans" class="nav-link">Artisans</a></li>
+            <li><a href="about.html" data-key="nav.about" class="nav-link">About</a></li>
+            <li><a href="contact.html" data-key="nav.contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Language Switcher -->
+          <div class="language-switcher-dropdown">
+            <button class="language-btn" id="languageToggle">
+              <span class="current-lang">EN</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown" id="languageDropdown">
+              <button class="lang-option active" data-lang="en">
+                <span class="lang-flag">🇺🇸</span>
+                <span class="lang-text">English</span>
+              </button>
+              <button class="lang-option" data-lang="it">
+                <span class="lang-flag">🇮🇹</span>
+                <span class="lang-text">Italiano</span>
+              </button>
+              <button class="lang-option" data-lang="fr">
+                <span class="lang-flag">🇫🇷</span>
+                <span class="lang-text">Français</span>
+              </button>
+              <!-- <button class="lang-option" data-lang="ar">
+                <span class="lang-flag">🇪🇬</span>
+                <span class="lang-text">العربية</span>
+              </button> -->
+            </div>
+          </div>
+
+          <!-- User Account -->
+          <div class="user-dropdown">
+            <button class="user-btn" id="userToggle">
+              <i class="fas fa-user"></i>
+            </button>
+            <div class="user-menu" id="userMenu">
+              <div class="user-info">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                  <span class="user-name">Welcome Guest</span>
+                  <span class="user-status">Sign in to your account</span>
+                </div>
+              </div>
+              <div class="user-actions">
+                <a href="login.html" class="user-action-btn">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span data-key="nav.login">Login</span>
+                </a>
+                <a href="register.html" class="user-action-btn">
+                  <i class="fas fa-user-plus"></i>
+                  <span data-key="nav.register">Register</span>
+                </a>
+                <a href="my-account.html" class="user-action-btn" style="display: none;" id="profileLink">
+                  <i class="fas fa-user-edit"></i>
+                  <span data-key="nav.profile">My Profile</span>
+                </a>
+                <a href="my-orders.html" class="user-action-btn" style="display: none;" id="ordersLink">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span data-key="nav.orders">My Orders</span>
+                </a>
+                <button class="user-action-btn logout-btn" style="display: none;" id="logoutBtn">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span data-key="nav.logout">Logout</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shopping Cart -->
+          <div class="cart-dropdown">
+            <button class="cart-btn" id="cartToggle">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </button>
+            <div class="cart-preview" id="cartPreview">
+              <div class="cart-header">
+                <h4 data-key="nav.cart">Shopping Cart</h4>
+                <span class="cart-items-count">0 items</span>
+              </div>
+              <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+                <div class="empty-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                  <p data-key="nav.emptyCart">Your cart is empty</p>
+                </div>
+              </div>
+              <div class="cart-footer">
+                <div class="cart-total">
+                  <span data-key="nav.total">Total:</span>
+                  <span class="total-amount">$0.00</span>
+                </div>
+                <div class="cart-actions">
+                  <a href="cart.html" class="btn btn-secondary" data-key="nav.viewCart">View Cart</a>
+                  <a href="checkout.html" class="btn btn-primary" data-key="nav.checkout">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-container">
+          <div class="auth-header">
+            <h1 data-key="auth.create.account">Create Account</h1>
+            <p data-key="auth.join">Join our community of craft lovers</p>
+          </div>
+
+          <form class="auth-form" id="registerForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName" data-key="auth.firstname">First Name</label>
+                <input type="text" id="firstName" name="firstName" required data-key="auth.firstname.placeholder" placeholder="First name">
+                <i class="fas fa-user input-icon"></i>
+              </div>
+              <div class="form-group">
+                <label for="lastName" data-key="auth.lastname">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required data-key="auth.lastname.placeholder" placeholder="Last name">
+                <i class="fas fa-user input-icon"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="regEmail" data-key="auth.email">Email Address</label>
+              <input type="email" id="regEmail" name="email" required data-key="auth.email.placeholder" placeholder="Enter your email">
+              <i class="fas fa-envelope input-icon"></i>
+            </div>
+
+            <div class="form-group">
+              <label for="regPassword" data-key="auth.password">Password</label>
+              <input type="password" id="regPassword" name="password" required data-key="auth.password.placeholder" placeholder="Create a password">
+              <i class="fas fa-lock input-icon"></i>
+              <button type="button" class="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="password-strength">
+              <div class="strength-bar">
+                <div class="strength-fill" data-strength="0"></div>
+              </div>
+              <span class="strength-text">Password strength</span>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword" data-key="auth.confirm.password">Confirm Password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" required data-key="auth.confirm.placeholder" placeholder="Confirm your password">
+              <i class="fas fa-lock input-icon"></i>
+              <button type="button" class="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <span class="checkmark"></span>
+                <span data-key="auth.agree">I agree to the</span> <a href="./terms.html" data-key="auth.terms">Terms of Service</a> <span data-key="auth.and">and</span> <a href="./privacy.html" data-key="auth.privacy">Privacy Policy</a>
+              </label>
+
+              <label class="checkbox-container">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <span class="checkmark"></span>
+                <span data-key="auth.newsletter">Subscribe to our newsletter for updates and offers</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary auth-btn">
+              <span class="btn-text" data-key="auth.create.btn">Create Account</span>
+              <div class="btn-loading" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span data-key="auth.creating">Creating Account...</span>
+              </div>
+            </button>
+
+            <div class="auth-divider">
+              <span data-key="auth.or">Or sign up with</span>
+            </div>
+
+            <div class="social-auth">
+              <button type="button" class="btn btn-social btn-google">
+                <i class="fab fa-google"></i>
+                <span data-key="auth.google">Continue with Google</span>
+              </button>
+              <button type="button" class="btn btn-social btn-facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span data-key="auth.facebook">Continue with Facebook</span>
+              </button>
+            </div>
+
+            <div class="auth-footer">
+              <p><span data-key="auth.haveaccount">Already have an account?</span> <a href="login.html" data-key="auth.signin.link">Sign in</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>SOUVENIR EGYPT</h3>
+            <p data-key="footer.description">Bringing authentic Egyptian handcrafts to the world. Each piece tells a
+              story of heritage, craftsmanship, and timeless beauty.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.shop">SHOP</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-key="categories.jewelry">Jewelry</a></li>
+              <li><a href="#" data-key="categories.pottery">Pottery</a></li>
+              <li><a href="#" data-key="categories.leather">Leather Products</a></li>
+              <li><a href="#" data-key="categories.rugs">Rugs & Kilims</a></li>
+              <li><a href="#" data-key="categories.cotton">Egyptian Cotton</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.help">HELP</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-key="footer.shipping">Shipping Information</a></li>
+              <li><a href="#" data-key="footer.returns">Returns & Exchanges</a></li>
+              <li><a href="#" data-key="footer.size">Size Guide</a></li>
+              <li><a href="#" data-key="footer.faq">FAQs</a></li>
+              <li><a href="#" data-key="footer.contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.contact">CONTACT</h3>
+            <ul class="footer-links">
+              <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+              <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+              <li><i class="fas fa-envelope"></i> info@souveniregypt.store</li>
+            </ul>
+            <h3 style="margin-top: 1.5rem;" data-key="footer.payment">PAYMENT METHODS</h3>
+            <div class="payment-methods">
+              <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+              <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+              <div class="payment-icon"><i class="fab fa-cc-paypal"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"></script>
+    <script src="../assets/js/smooth-scroll.js"></script>
+    <script src="../assets/js/language-switcher-auth.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/footer.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+
+</html>

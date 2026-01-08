@@ -1,0 +1,359 @@
+/* Responsive Design */
+@media (max-width: 992px) {
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .artisans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-text {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .brand-tagline {
+    font-size: 1.4rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .guarantee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-btn {
+    border-radius: 4px;
+    padding: 12px;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-blue);
+    flex-direction: column;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .language-switcher {
+    top: 70px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artisans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .btn {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .hero-text {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .category-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .language-switcher {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* responsive.css - Enhanced with Auth and Account responsive styles */
+
+/* Existing responsive styles... */
+
+/* Auth Pages Responsive */
+@media (max-width: 768px) {
+    .auth-section {
+        padding: 100px 0 40px;
+    }
+    
+    .auth-container {
+        margin: 0 1rem;
+    }
+    
+    .auth-header {
+        padding: 2rem 1.5rem 1rem;
+    }
+    
+    .auth-form {
+        padding: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .social-auth {
+        gap: 0.5rem;
+    }
+    
+    .btn-social {
+        padding: 0.625rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .auth-notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+/* Account Pages Responsive */
+@media (max-width: 992px) {
+    .account-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .account-sidebar {
+        position: static;
+        order: 2;
+    }
+    
+    .account-content {
+        order: 1;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .account-section {
+        padding: 100px 0 40px;
+    }
+    
+    .account-content {
+        padding: 1.5rem;
+    }
+    
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .order-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .order-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .addresses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hotel-address-card {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .stay-dates {
+        text-align: left;
+    }
+    
+    .danger-action {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .modal-content {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .actions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .orders-filter {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .address-actions {
+        flex-direction: column;
+    }
+    
+    .order-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .order-actions .btn {
+        text-align: center;
+    }
+}
+
+/* Smooth Scroll Responsive */
+@media (max-width: 768px) {
+    /* Disable smooth scroll on mobile for better performance */
+    body {
+        overflow: auto !important;
+        position: static !important;
+    }
+    
+    #smooth-wrapper {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    #smooth-content {
+        transform: none !important;
+    }
+}
+
+/* Header responsive styles for auth pages */
+@media (max-width: 768px) {
+    .header-actions {
+        gap: 0.5rem;
+    }
+    
+    .language-btn .current-lang {
+        display: none;
+    }
+    
+    .language-btn {
+        min-width: auto;
+        padding: 0.5rem;
+    }
+}
+
+/* Footer responsive styles */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .payment-methods {
+        justify-content: center;
+    }
+}
+
+/* Animation adjustments for mobile */
+@media (max-width: 768px) {
+    .fade-out {
+        transform: translateY(10px);
+    }
+    
+    .category-card:hover,
+    .product-card:hover,
+    .action-card:hover {
+        transform: none;
+    }
+}

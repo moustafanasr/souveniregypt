@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUVENIR - Authentic Egyptian Handcraft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-text">SOUVENIR EGYPT.STORE</span>
+            <span class="logo-subtitle">Authentic Handcrafts</span>
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index2.html" data-key="nav.home" class="nav-link">Home</a></li>
+            <li><a href="shop.html" data-key="nav.collections" class="nav-link">Collections</a></li>
+            <li><a href="artisans.html" data-key="nav.artisans" class="nav-link">Artisans</a></li>
+            <li><a href="about.html" data-key="nav.about" class="nav-link">About</a></li>
+            <li><a href="contact.html" data-key="nav.contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Language Switcher -->
+          <div class="language-switcher-dropdown">
+            <button class="language-btn" id="languageToggle">
+              <span class="current-lang">EN</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown" id="languageDropdown">
+              <button class="lang-option active" data-lang="en">
+                <span class="lang-flag">🇺🇸</span>
+                <span class="lang-text">English</span>
+              </button>
+              <button class="lang-option" data-lang="it">
+                <span class="lang-flag">🇮🇹</span>
+                <span class="lang-text">Italiano</span>
+              </button>
+              <button class="lang-option" data-lang="fr">
+                <span class="lang-flag">🇫🇷</span>
+                <span class="lang-text">Français</span>
+              </button>
+              <!-- <button class="lang-option" data-lang="ar">
+                <span class="lang-flag">🇪🇬</span>
+                <span class="lang-text">العربية</span>
+              </button> -->
+            </div>
+          </div>
+
+          <!-- User Account -->
+          <div class="user-dropdown">
+            <button class="user-btn" id="userToggle">
+              <i class="fas fa-user"></i>
+            </button>
+            <div class="user-menu" id="userMenu">
+              <div class="user-info">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                  <span class="user-name">Welcome Guest</span>
+                  <span class="user-status">Sign in to your account</span>
+                </div>
+              </div>
+              <div class="user-actions">
+                <a href="login.html" class="user-action-btn">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span data-key="nav.login">Login</span>
+                </a>
+                <a href="register.html" class="user-action-btn">
+                  <i class="fas fa-user-plus"></i>
+                  <span data-key="nav.register">Register</span>
+                </a>
+                <a href="my-account.html" class="user-action-btn" style="display: none;" id="profileLink">
+                  <i class="fas fa-user-edit"></i>
+                  <span data-key="nav.profile">My Profile</span>
+                </a>
+                <a href="my-orders.html" class="user-action-btn" style="display: none;" id="ordersLink">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span data-key="nav.orders">My Orders</span>
+                </a>
+                <button class="user-action-btn logout-btn" style="display: none;" id="logoutBtn">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span data-key="nav.logout">Logout</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shopping Cart -->
+          <div class="cart-dropdown">
+            <button class="cart-btn" id="cartToggle">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </button>
+            <div class="cart-preview" id="cartPreview">
+              <div class="cart-header">
+                <h4 data-key="nav.cart">Shopping Cart</h4>
+                <span class="cart-items-count">0 items</span>
+              </div>
+              <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+                <div class="empty-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                  <p data-key="nav.emptyCart">Your cart is empty</p>
+                </div>
+              </div>
+              <div class="cart-footer">
+                <div class="cart-total">
+                  <span data-key="nav.total">Total:</span>
+                  <span class="total-amount">$0.00</span>
+                </div>
+                <div class="cart-actions">
+                  <a href="cart.html" class="btn btn-secondary" data-key="nav.viewCart">View Cart</a>
+                  <a href="checkout.html" class="btn btn-primary" data-key="nav.checkout">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2 data-key="hero.subtitle">SHOP AUTHENTIC</h2>
+                <h1 data-key="hero.title">Egyptian Handcrafts</h1>
+                <div class="brand-tagline" data-key="hero.tagline">SOUVENIR, AUTHENTIC Egyptian Handcraft</div>
+                <p class="hero-tagline" data-key="hero.description">Bring a piece of authentic Egyptian Handcraft to your home. Handmade with love by Egyptian artisans.</p>
+                <div class="hero-buttons">
+                    <a href="#categories" class="btn btn-primary" data-key="hero.shop">SHOP NOW</a>
+                    <a href="#artisans" class="btn btn-secondary" data-key="hero.artisans">MEET THE ARTISANS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Product Categories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title" data-key="categories.title">Our Collections</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="./assets/img/jewelry.jpeg" alt="Jewelry" class="category-image">
+                    <h3 data-key="categories.jewelry">Jewelry</h3>
+                </div>
+                <div class="category-card">
+                    <img src="./assets/img/pottery.png" alt="Pottery" class="category-image">
+                    <h3 data-key="categories.pottery">Pottery</h3>
+                </div>
+                <div class="category-card">
+                    <img src="./assets/img/leather.png" alt="Leather Products" class="category-image">
+                    <h3 data-key="categories.leather">Leather Products</h3>
+                </div>
+                <div class="category-card">
+                    <img src="./assets/img/Kilimandcarpet.png" alt="Rugs & Kilims" class="category-image">
+                    <h3 data-key="categories.rugs">Rugs & Kilims</h3>
+                </div>
+                <div class="category-card">
+                    <img src="./assets/img/fashion.jpg" alt="Egyptian Cotton" class="category-image">
+                    <h3 data-key="categories.cotton">Egyptian Cotton</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Delivery Promise -->
+    <section class="delivery">
+        <div class="container">
+            <p data-key="delivery.title">WILL BE DELIVERED TO YOUR HOTEL OF YOUR STAY IN EGYPT OR SHIPPED HOME • CAN BE ORDERED AS A GIFT</p>
+            <a href="#" data-key="delivery.link">VIEW SHIPPING OPTIONS & DETAILS →</a>
+        </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="featured">
+        <div class="container">
+            <h2 class="section-title" data-key="featured.title">Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80" alt="Silver Ankh Necklace" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name" data-key="featured.product1.name">Silver Ankh Necklace</h3>
+                        <p class="product-price">$89.99</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/img/pottery.png" alt="Hand-painted Pottery Vase" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name" data-key="featured.product2.name">Hand-painted Pottery Vase</h3>
+                        <p class="product-price">$45.50</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/img/leather.png" alt="Leather Handbag" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name" data-key="featured.product3.name">Leather Handbag</h3>
+                        <p class="product-price">$120.00</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Traditional Kilim Rug" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name" data-key="featured.product4.name">Traditional Kilim Rug</h3>
+                        <p class="product-price">$250.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-key="testimonials.title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text" data-key="testimonials.text1">The silver cartouche I bought is absolutely stunning! The craftsmanship is exceptional and it arrived beautifully packaged. Will definitely order again!</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson" class="author-image">
+                        <div>
+                            <div class="author-name">Sarah Johnson</div>
+                            <div class="author-location">London, UK</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text" data-key="testimonials.text2">I ordered the Egyptian cotton towels as gifts for my family. The quality is outstanding and everyone loved them. The shipping was faster than expected!</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Brown" class="author-image">
+                        <div>
+                            <div class="author-name">Michael Brown</div>
+                            <div class="author-location">New York, USA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text" data-key="testimonials.text3">The pottery vase I purchased is even more beautiful in person. It's the centerpiece of my living room now. Thank you for such a unique and high-quality product!</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Wilson" class="author-image">
+                        <div>
+                            <div class="author-name">Emma Wilson</div>
+                            <div class="author-location">Toronto, Canada</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Artisans Section -->
+    <section class="artisans" id="artisans">
+        <div class="container">
+            <h2 class="section-title" data-key="artisans.title">MEET THE ARTISANS</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem; color: var(--deep-teal);" data-key="artisans.subtitle">
+                Handcrafted with Heart</p>
+            <div class="artisans-grid">
+                <div class="artisan-card">
+                    <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ahmed Hassan" class="artisan-img">
+                    <h3 class="artisan-name">Ahmed Hassan</h3>
+                    <p class="artisan-bio" data-key="artisans.bio1">Master jeweler with 25 years of experience creating intricate gold and silver pieces inspired by ancient Egyptian designs.</p>
+                </div>
+                <div class="artisan-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Fatima Ali" class="artisan-img">
+                    <h3 class="artisan-name">Fatima Ali</h3>
+                    <p class="artisan-bio" data-key="artisans.bio2">Textile artist specializing in handwoven Egyptian cotton and traditional embroidery techniques passed down through generations.</p>
+                </div>
+                <div class="artisan-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mohamed Ibrahim" class="artisan-img">
+                    <h3 class="artisan-name">Mohamed Ibrahim</h3>
+                    <p class="artisan-bio" data-key="artisans.bio3">Pottery master creating beautiful clay vessels using techniques dating back to ancient Egyptian civilizations.</p>
+                </div>
+            </div>
+            <div class="center-btn">
+                <a href="#" class="btn btn-primary" data-key="artisans.button">Read Their Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-separator">
+
+    <!-- Guarantee Section -->
+    <section class="guarantee" id="guarantee">
+        <div class="container">
+            <h2 class="section-title" data-key="guarantee.title">SOUVENIR EGYPT STORE GUARANTEE</h2>
+            <div class="guarantee-grid">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">✓</div>
+                    <h3 class="guarantee-title" data-key="guarantee.quality">Quality Handmade</h3>
+                    <p data-key="guarantee.quality.desc">Authentic crafts made with centuries-old techniques.</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">🌍</div>
+                    <h3 class="guarantee-title" data-key="guarantee.shipping">International Shipping</h3>
+                    <p data-key="guarantee.shipping.desc">We deliver our treasures worldwide.</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">🎁</div>
+                    <h3 class="guarantee-title" data-key="guarantee.gift">Perfect Gift Idea</h3>
+                    <p data-key="guarantee.gift.desc">A unique and memorable present for loved ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 data-key="newsletter.title">Stay Connected</h2>
+            <p data-key="newsletter.subtitle">Subscribe to our newsletter for exclusive offers, new arrivals, and stories from our artisans.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Your email address" required data-key="newsletter.placeholder">
+                <button type="submit" class="newsletter-btn" data-key="newsletter.button">SUBSCRIBE</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SOUVENIR EGYPT</h3>
+                    <p data-key="footer.description">Bringing authentic Egyptian handcrafts to the world. Each piece tells a story of heritage, craftsmanship, and timeless beauty.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.shop">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-key="categories.jewelry">Jewelry</a></li>
+                        <li><a href="#" data-key="categories.pottery">Pottery</a></li>
+                        <li><a href="#" data-key="categories.leather">Leather Products</a></li>
+                        <li><a href="#" data-key="categories.rugs">Rugs & Kilims</a></li>
+                        <li><a href="#" data-key="categories.cotton">Egyptian Cotton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.help">HELP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-key="footer.shipping">Shipping Information</a></li>
+                        <li><a href="#" data-key="footer.returns">Returns & Exchanges</a></li>
+                        <li><a href="#" data-key="footer.size">Size Guide</a></li>
+                        <li><a href="#" data-key="footer.faq">FAQs</a></li>
+                        <li><a href="#" data-key="footer.contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.contact">CONTACT</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+                        <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@souveniregypt.store</li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;" data-key="footer.payment">PAYMENT METHODS</h3>
+                    <div class="payment-methods">
+                        <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-paypal"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/language-switcher-home.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

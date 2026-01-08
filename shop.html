@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - SOUVENIR Egyptian Handcrafts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-text">SOUVENIR EGYPT.STORE</span>
+            <span class="logo-subtitle">Authentic Handcrafts</span>
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index2.html" data-key="nav.home" class="nav-link">Home</a></li>
+            <li><a href="shop.html" data-key="nav.collections" class="nav-link">Collections</a></li>
+            <li><a href="artisans.html" data-key="nav.artisans" class="nav-link">Artisans</a></li>
+            <li><a href="about.html" data-key="nav.about" class="nav-link">About</a></li>
+            <li><a href="contact.html" data-key="nav.contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Language Switcher -->
+          <div class="language-switcher-dropdown">
+            <button class="language-btn" id="languageToggle">
+              <span class="current-lang">EN</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown" id="languageDropdown">
+              <button class="lang-option active" data-lang="en">
+                <span class="lang-flag">🇺🇸</span>
+                <span class="lang-text">English</span>
+              </button>
+              <button class="lang-option" data-lang="it">
+                <span class="lang-flag">🇮🇹</span>
+                <span class="lang-text">Italiano</span>
+              </button>
+              <button class="lang-option" data-lang="fr">
+                <span class="lang-flag">🇫🇷</span>
+                <span class="lang-text">Français</span>
+              </button>
+              <!-- <button class="lang-option" data-lang="ar">
+                <span class="lang-flag">🇪🇬</span>
+                <span class="lang-text">العربية</span>
+              </button> -->
+            </div>
+          </div>
+
+          <!-- User Account -->
+          <div class="user-dropdown">
+            <button class="user-btn" id="userToggle">
+              <i class="fas fa-user"></i>
+            </button>
+            <div class="user-menu" id="userMenu">
+              <div class="user-info">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                  <span class="user-name">Welcome Guest</span>
+                  <span class="user-status">Sign in to your account</span>
+                </div>
+              </div>
+              <div class="user-actions">
+                <a href="login.html" class="user-action-btn">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span data-key="nav.login">Login</span>
+                </a>
+                <a href="register.html" class="user-action-btn">
+                  <i class="fas fa-user-plus"></i>
+                  <span data-key="nav.register">Register</span>
+                </a>
+                <a href="my-account.html" class="user-action-btn" style="display: none;" id="profileLink">
+                  <i class="fas fa-user-edit"></i>
+                  <span data-key="nav.profile">My Profile</span>
+                </a>
+                <a href="my-orders.html" class="user-action-btn" style="display: none;" id="ordersLink">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span data-key="nav.orders">My Orders</span>
+                </a>
+                <button class="user-action-btn logout-btn" style="display: none;" id="logoutBtn">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span data-key="nav.logout">Logout</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shopping Cart -->
+          <div class="cart-dropdown">
+            <button class="cart-btn" id="cartToggle">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </button>
+            <div class="cart-preview" id="cartPreview">
+              <div class="cart-header">
+                <h4 data-key="nav.cart">Shopping Cart</h4>
+                <span class="cart-items-count">0 items</span>
+              </div>
+              <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+                <div class="empty-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                  <p data-key="nav.emptyCart">Your cart is empty</p>
+                </div>
+              </div>
+              <div class="cart-footer">
+                <div class="cart-total">
+                  <span data-key="nav.total">Total:</span>
+                  <span class="total-amount">$0.00</span>
+                </div>
+                <div class="cart-actions">
+                  <a href="cart.html" class="btn btn-secondary" data-key="nav.viewCart">View Cart</a>
+                  <a href="checkout.html" class="btn btn-primary" data-key="nav.checkout">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Shop Header -->
+    <section class="shop-header">
+      <div class="container">
+        <div class="shop-header-content">
+          <h1 data-key="shop.title">Our Collections</h1>
+          <p data-key="shop.subtitle">Discover authentic Egyptian handcrafts, each piece telling a story of heritage and
+            craftsmanship.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Controls -->
+    <section class="shop-controls">
+      <div class="container">
+        <div class="controls-grid">
+          <!-- Search Bar -->
+          <div class="search-control">
+            <div class="search-box-large">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Search products..." id="mainSearchInput"
+                data-key="shop.search.placeholder">
+              <button class="search-btn" data-key="shop.search.button">Search</button>
+            </div>
+          </div>
+
+          <!-- Filter & Sort Controls -->
+          <div class="filter-sort-controls">
+            <!-- Category Filter -->
+            <div class="filter-group">
+              <label data-key="shop.filter.category">Category</label>
+              <select id="categoryFilter" class="filter-select">
+                <option value="all" data-key="shop.filter.all">All Categories</option>
+                <option value="jewelry" data-key="categories.jewelry">Jewelry</option>
+                <option value="pottery" data-key="categories.pottery">Pottery</option>
+                <option value="leather" data-key="categories.leather">Leather Products</option>
+                <option value="rugs" data-key="categories.rugs">Rugs & Kilims</option>
+                <option value="cotton" data-key="categories.cotton">Egyptian Cotton</option>
+              </select>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="filter-group">
+              <label data-key="shop.filter.price">Price Range</label>
+              <select id="priceFilter" class="filter-select">
+                <option value="all" data-key="shop.filter.all">All Prices</option>
+                <option value="0-50">$0 - $50</option>
+                <option value="50-100">$50 - $100</option>
+                <option value="100-200">$100 - $200</option>
+                <option value="200-500">$200 - $500</option>
+                <option value="500+">$500+</option>
+              </select>
+            </div>
+
+            <!-- Sort Options -->
+            <div class="filter-group">
+              <label data-key="shop.sort.title">Sort By</label>
+              <select id="sortOptions" class="filter-select">
+                <option value="featured" data-key="shop.sort.featured">Featured</option>
+                <option value="newest" data-key="shop.sort.newest">Newest</option>
+                <option value="price-low" data-key="shop.sort.priceLow">Price: Low to High</option>
+                <option value="price-high" data-key="shop.sort.priceHigh">Price: High to Low</option>
+                <option value="name" data-key="shop.sort.name">Name: A to Z</option>
+              </select>
+            </div>
+
+            <!-- View Toggle -->
+            <div class="view-toggle">
+              <button class="view-btn active" data-view="grid" title="Grid View">
+                <i class="fas fa-th"></i>
+              </button>
+              <button class="view-btn" data-view="list" title="List View">
+                <i class="fas fa-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filters -->
+        <div class="active-filters" id="activeFilters">
+          <!-- Active filters will be displayed here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+      <div class="container">
+        <!-- Products Grid -->
+        <div class="products-container">
+          <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically loaded here -->
+          </div>
+
+          <!-- Loading State -->
+          <div class="loading-state" id="loadingState">
+            <div class="loading-spinner"></div>
+            <p data-key="shop.loading">Loading products...</p>
+          </div>
+
+          <!-- No Results State -->
+          <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3 data-key="shop.noResults.title">No products found</h3>
+            <p data-key="shop.noResults.message">Try adjusting your search or filters to find what you're looking for.
+            </p>
+            <button class="btn btn-primary" id="resetFilters" data-key="shop.noResults.reset">Reset Filters</button>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+          <!-- Pagination will be dynamically generated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="quick-view-content" id="quickViewContent">
+          <!-- Quick view content will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>SOUVENIR EGYPT</h3>
+            <p data-key="footer.description">Bringing authentic Egyptian handcrafts to the world. Each piece tells a
+              story of heritage, craftsmanship, and timeless beauty.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.shop">SHOP</h3>
+            <ul class="footer-links">
+              <li><a href="shop.html?category=jewelry" data-key="categories.jewelry">Jewelry</a></li>
+              <li><a href="shop.html?category=pottery" data-key="categories.pottery">Pottery</a></li>
+              <li><a href="shop.html?category=leather" data-key="categories.leather">Leather Products</a></li>
+              <li><a href="shop.html?category=rugs" data-key="categories.rugs">Rugs & Kilims</a></li>
+              <li><a href="shop.html?category=cotton" data-key="categories.cotton">Egyptian Cotton</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.help">HELP</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-key="footer.shipping">Shipping Information</a></li>
+              <li><a href="#" data-key="footer.returns">Returns & Exchanges</a></li>
+              <li><a href="#" data-key="footer.size">Size Guide</a></li>
+              <li><a href="#" data-key="footer.faq">FAQs</a></li>
+              <li><a href="#" data-key="footer.contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.contact">CONTACT</h3>
+            <ul class="footer-links">
+              <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+              <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+              <li><i class="fas fa-envelope"></i> info@souveniregypt.store</li>
+            </ul>
+            <h3 style="margin-top: 1.5rem;" data-key="footer.payment">PAYMENT METHODS</h3>
+            <div class="payment-methods">
+              <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+              <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+              <div class="payment-icon"><i class="fab fa-cc-paypal"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/language-switcher-shop.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/shop.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+
+</html>
