@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Artisans - SOUVENIR Egyptian Handcrafts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/artisans.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-text">SOUVENIR EGYPT.STORE</span>
+            <span class="logo-subtitle">Authentic Handcrafts</span>
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html" data-key="nav.home" class="nav-link">Home</a></li>
+            <li><a href="shop.html" data-key="nav.collections" class="nav-link">Collections</a></li>
+            <li><a href="artisans.html" data-key="nav.artisans" class="nav-link">Artisans</a></li>
+            <li><a href="about.html" data-key="nav.about" class="nav-link">About</a></li>
+            <li><a href="contact.html" data-key="nav.contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Language Switcher -->
+          <div class="language-switcher-dropdown">
+            <button class="language-btn" id="languageToggle">
+              <span class="current-lang">EN</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown" id="languageDropdown">
+              <button class="lang-option active" data-lang="en">
+                <span class="lang-flag">🇺🇸</span>
+                <span class="lang-text">English</span>
+              </button>
+              <button class="lang-option" data-lang="it">
+                <span class="lang-flag">🇮🇹</span>
+                <span class="lang-text">Italiano</span>
+              </button>
+              <button class="lang-option" data-lang="fr">
+                <span class="lang-flag">🇫🇷</span>
+                <span class="lang-text">Français</span>
+              </button>
+              <!-- <button class="lang-option" data-lang="ar">
+                <span class="lang-flag">🇪🇬</span>
+                <span class="lang-text">العربية</span>
+              </button> -->
+            </div>
+          </div>
+
+          <!-- User Account -->
+          <div class="user-dropdown">
+            <button class="user-btn" id="userToggle">
+              <i class="fas fa-user"></i>
+            </button>
+            <div class="user-menu" id="userMenu">
+              <div class="user-info">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                  <span class="user-name">Welcome Guest</span>
+                  <span class="user-status">Sign in to your account</span>
+                </div>
+              </div>
+              <div class="user-actions">
+                <a href="login.html" class="user-action-btn">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span data-key="nav.login">Login</span>
+                </a>
+                <a href="register.html" class="user-action-btn">
+                  <i class="fas fa-user-plus"></i>
+                  <span data-key="nav.register">Register</span>
+                </a>
+                <a href="my-account.html" class="user-action-btn" style="display: none;" id="profileLink">
+                  <i class="fas fa-user-edit"></i>
+                  <span data-key="nav.profile">My Profile</span>
+                </a>
+                <a href="my-orders.html" class="user-action-btn" style="display: none;" id="ordersLink">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span data-key="nav.orders">My Orders</span>
+                </a>
+                <button class="user-action-btn logout-btn" style="display: none;" id="logoutBtn">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span data-key="nav.logout">Logout</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shopping Cart -->
+          <div class="cart-dropdown">
+            <button class="cart-btn" id="cartToggle">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </button>
+            <div class="cart-preview" id="cartPreview">
+              <div class="cart-header">
+                <h4 data-key="nav.cart">Shopping Cart</h4>
+                <span class="cart-items-count">0 items</span>
+              </div>
+              <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+                <div class="empty-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                  <p data-key="nav.emptyCart">Your cart is empty</p>
+                </div>
+              </div>
+              <div class="cart-footer">
+                <div class="cart-total">
+                  <span data-key="nav.total">Total:</span>
+                  <span class="total-amount">$0.00</span>
+                </div>
+                <div class="cart-actions">
+                  <a href="cart.html" class="btn btn-secondary" data-key="nav.viewCart">View Cart</a>
+                  <a href="checkout.html" class="btn btn-primary" data-key="nav.checkout">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Artisans Hero Section -->
+    <section class="artisans-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Meet Our Master Artisans</h1>
+          <p>Discover the talented hands and passionate hearts behind every Souvenir Egypt piece. Each artisan brings
+            generations of tradition and personal creativity to their craft.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Navigation -->
+    <section class="categories-nav">
+      <div class="container">
+        <div class="categories-grid">
+          <button class="category-btn active" data-category="all">All Artisans</button>
+          <button class="category-btn" data-category="leather">
+            <i class="fas fa-cut"></i> Leather Craft
+          </button>
+          <button class="category-btn" data-category="jewelry">
+            <i class="fas fa-gem"></i> Jewelry
+          </button>
+          <button class="category-btn" data-category="pottery">
+            <i class="fas fa-mortar-pestle"></i> Pottery
+          </button>
+          <button class="category-btn" data-category="textiles">
+            <i class="fas fa-tshirt"></i> Textiles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leather Artisans Section -->
+    <section class="artisans-section" id="leather-section">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-cut"></i> Master Leather Artisans</h2>
+          <p>Preserving traditional leathercraft with modern elegance</p>
+        </div>
+
+        <div class="artisans-grid">
+          <!-- Rana AL Saey -->
+          <div class="artisan-card" data-category="leather">
+            <div class="artisan-image">
+              <img src="assets/img/rana-leather.jpg" alt="Rana AL Saey"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Natural Leather</span>
+                  <span class="specialty-tag">Embossing</span>
+                  <span class="specialty-tag">Hand-stitching</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Rana AL Saey</h3>
+              <p class="artisan-title">Founder of Rano Leather</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>When passion becomes a defining mark... Since childhood, Rana has found happiness among colors and
+                    threads. Her journey began with crochet and tapestry, eventually leading her to master natural
+                    leather crafting in Bab El Shaariya, Cairo.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>When Passion Becomes a Defining Mark Since childhood, Randa El Saey has found her happiness among
+                    colors and threads, crafting beauty with her hands and weaving dreams with her imagination. Although
+                    she studied at the Faculty of Commerce instead of Fine Arts, her love for handicrafts never faded.
+                  </p>
+                  <p>She began her journey by learning crochet and tapestry, mastering both and later training young
+                    women to perfect these crafts. Her passion didn't stop there. Randa continued exploring and learning
+                    new arts such as quilting, patchwork, embroidery, and fabric painting, searching for a way to merge
+                    all these skills into one creative expression that carried her personal touch.</p>
+                  <p>That's when she discovered natural leather — a material that could beautifully blend with fabric,
+                    crochet, and other handmade arts. Determined to learn from the source, she went to Bab El Shaariya
+                    in Cairo to study the fundamentals of leather crafting, taking her first real steps into the world
+                    of handmade bags and wallets.</p>
+                  <p>During the lockdown period of the COVID-19 pandemic, Randa used her time to refine her craft,
+                    following international artists online to master the details of finishing and professional design
+                    techniques. By the end of 2020, she launched her own brand, and her very first product — a men's
+                    wallet featuring embossed detailing — received great feedback from her first client, encouraging her
+                    to keep going.</p>
+                  <p>In 2022, Randa's project was selected among the top five finalists in a business incubator program
+                    organized by the Ministry of Industry and the Academy of Scientific Research, after which her brand
+                    was officially registered. Today, Randa proudly owns Rano, a handmade leather goods brand that
+                    represents more than just craftsmanship — it's a story of passion that began with a thread and a
+                    needle and grew into a dream crafted with heart and hand.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Signature Products</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Handmade Bags</span>
+                  <span class="product-tag">Wallets</span>
+                  <span class="product-tag">Embossed Leather</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="shop.html?category=leather" class="btn btn-primary">View Products</a>
+                <button class="btn btn-secondary share-btn" data-artisan="rana">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Asmaa Omran -->
+          <div class="artisan-card" data-category="leather">
+            <div class="artisan-image">
+              <img src="assets/img/asmaa-leather.jpg" alt="Asmaa Omran"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Hand-carving</span>
+                  <span class="specialty-tag">Embossing</span>
+                  <span class="specialty-tag">Leather Burning</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Asmaa Omran</h3>
+              <p class="artisan-title">Founder of "Ibnat Omran"</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>A 2007 Commerce graduate who found her calling in leather craftsmanship. Asmaa combines authentic
+                    Egyptian heritage with modern designs through hand-carving, embossing, and burning techniques.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>Asmaa Omran – Founder of the brand "Ibnat Omran" (the daughter of Omran). A 2007 graduate of the
+                    Faculty of Commerce, Cairo University, my creative journey in the world of handicrafts began after
+                    studying techniques and design in Bab El Shaaria in 2019.</p>
+                  <p>My own brand, "Ibnat Omran," was established in 2021, specializing in natural leather products. My
+                    work combines authentic Egyptian heritage with modern designs, showcasing my expertise in
+                    hand-carving, embossing, and burning techniques on leather.</p>
+                  <p>I have participated in numerous exhibitions, including the Cairo International Leather Fair, and
+                    have completed several courses in marketing and artificial intelligence. I also continue my studies
+                    in various art forms and drawing techniques using all available materials.</p>
+                  <p>Each piece I create tells a story of Egyptian heritage, blending traditional motifs with
+                    contemporary aesthetics to create timeless leather goods that honor our cultural legacy while
+                    appealing to modern sensibilities.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Signature Products</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Carved Leather</span>
+                  <span class="product-tag">Heritage Designs</span>
+                  <span class="product-tag">Artisan Tools</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="shop.html?category=leather" class="btn btn-primary">View Products</a>
+                <button class="btn btn-secondary share-btn" data-artisan="asmaa">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shiraz Magdi -->
+          <div class="artisan-card" data-category="leather">
+            <div class="artisan-image">
+              <img src="assets/img/shiraz-leather.jpg" alt="Shiraz Magdi"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Luxury Goods</span>
+                  <span class="specialty-tag">Hand-woven</span>
+                  <span class="specialty-tag">Contemporary Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Shiraz Magdi</h3>
+              <p class="artisan-title">Visual Artist & Leather Designer</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>Inspired by Egyptian heritage, Shiraz shapes natural leather with contemporary vision. A visual
+                    artist and interior designer who creates timeless leather pieces that tell stories of culture and
+                    passion.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>Inspired by the richness of Egyptian artisanal heritage, Shiraz embraces natural leather as a
+                    timeless material, shaping it with a contemporary artistic vision to tell stories of culture,
+                    passion, and identity.</p>
+                  <p>Shiraz is a luxury handmade leather goods brand founded by Shiraz Magdi — a visual artist and
+                    passionate interior designer with a deep love for traditional craftsmanship and natural materials.
+                    The journey began in 2017, when Shiraz participated in a visual arts exhibition using natural
+                    leather for the first time.</p>
+                  <p>Captivated by the elegance and sophistication of the material, she immersed herself in learning
+                    leather-craft techniques — from cutting and perforating to hand-stitching — eventually setting up a
+                    small workshop fully equipped with artisanal tools, and creating her first hand-woven leather bag.
+                  </p>
+                  <p>This marked the birth of Shiraz, a brand that continues to evolve with passion, creativity, and an
+                    entrepreneurial spirit. Today, Shiraz remains committed to crafting timeless leather pieces that
+                    combine artistic expression, meticulous craftsmanship, durability, and elegance — products designed
+                    to accompany their owners for a lifetime and reflect their distinctive taste and character.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Signature Products</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Hand-woven Bags</span>
+                  <span class="product-tag">Luxury Accessories</span>
+                  <span class="product-tag">Art Pieces</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="shop.html?category=leather" class="btn btn-primary">View Products</a>
+                <button class="btn btn-secondary share-btn" data-artisan="shiraz">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Susan Gamal -->
+          <div class="artisan-card" data-category="leather">
+            <div class="artisan-image">
+              <img src="assets/img/susan-leather.jpg" alt="Susan Gamal"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Training</span>
+                  <span class="specialty-tag">Empowerment</span>
+                  <span class="specialty-tag">Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Susan Gamal</h3>
+              <p class="artisan-title">Trainer & Women's Empowerment Advocate</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>Certified entrepreneurship trainer from AUC, focusing on economic empowerment of women and youth
+                    through leather craftsmanship. A key figure in Egypt's handicraft development initiatives.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>Certified entrepreneurship and idea generation trainer for artisans from the American University in
+                    Cairo, the National Council for Women, and the United Nations. Also a trainer in the craft of
+                    manufacturing natural leather products at cultural centers and the National Council for Women,
+                    focusing on the economic empowerment of women and youth.</p>
+                  <p>A professional designer using various design software. A member of the General Assembly of the
+                    Handicrafts Chamber at the Federation of Egyptian Industries. A member of the "Creativity in Egypt"
+                    initiative, sponsored by Bank of Alexandria and the Sawiris Foundation for the development of
+                    handicrafts.</p>
+                  <p>A member of the National Council for Women's initiatives in Cairo for women's development and
+                    economic empowerment. Susan's work goes beyond crafting—she's dedicated to passing on traditional
+                    skills to new generations, particularly focusing on empowering women through sustainable craft-based
+                    livelihoods.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Focus Areas</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Training Programs</span>
+                  <span class="product-tag">Workshops</span>
+                  <span class="product-tag">Design Consultation</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="workshops.html" class="btn btn-primary">View Workshops</a>
+                <button class="btn btn-secondary share-btn" data-artisan="susan">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sahar Mahdy -->
+          <div class="artisan-card" data-category="leather">
+            <div class="artisan-image">
+              <img src="assets/img/sahar-leather.jpg" alt="Sahar Mahdy"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Pattern Design</span>
+                  <span class="specialty-tag">Engraving</span>
+                  <span class="specialty-tag">Training</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Sahar Mahdy</h3>
+              <p class="artisan-title">Internationally Certified Leather Designer</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>Internationally certified trainer specializing in natural leather design, pattern drafting, and all
+                    leather techniques from burning and engraving to assembly and pricing.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>An internationally certified trainer accredited by the Science and Technology Authority and the
+                    European Quality Organization. A professional natural leather designer specializing in the design,
+                    execution, and drafting of natural leather patterns, manufacturing, and training in all related
+                    techniques, including burning, drawing, engraving, cutting, pricing, and assembling natural leather.
+                  </p>
+                  <p>Sahar brings a systematic and professional approach to traditional leathercraft, combining artistic
+                    vision with technical precision. Her expertise spans the entire leather production process, making
+                    her a valuable resource for both aspiring artisans and established craftspeople looking to refine
+                    their skills.</p>
+                  <p>With certifications from international bodies, Sahar ensures that Egyptian leather craftsmanship
+                    meets global standards while preserving the unique cultural identity that makes Egyptian leatherwork
+                    special.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Expertise</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Pattern Drafting</span>
+                  <span class="product-tag">Technical Training</span>
+                  <span class="product-tag">Quality Standards</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="training.html" class="btn btn-primary">View Courses</a>
+                <button class="btn btn-secondary share-btn" data-artisan="sahar">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jewelry Artisans Section -->
+    <section class="artisans-section" id="jewelry-section">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-gem"></i> Master Jewelry Artisans</h2>
+          <p>Where heritage meets contemporary design in precious metals</p>
+        </div>
+
+        <div class="artisans-grid">
+          <!-- Somaya Wail Ismail -->
+          <div class="artisan-card" data-category="jewelry">
+            <div class="artisan-image">
+              <img src="assets/img/somaya-jewelry.jpg" alt="Somaya Wail Ismail"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Heritage Jewelry</span>
+                  <span class="specialty-tag">Metalwork</span>
+                  <span class="specialty-tag">Education</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Somaya Wail Ismail</h3>
+              <p class="artisan-title">Jewelry Designer & Educator</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>Former engineer turned jewelry designer who combines technical insight with heritage craft.
+                    Oversees jewelry workshops and champions craft-based learning in design education.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>Somaya is a jewelry designer, maker, and passionate advocate for craft-based learning in design.
+                    She currently oversees the jewelry design workshop at the German International University. Drawing
+                    on her experience as a former engineer and her time at the Jameel House for Traditional Arts, Somaya
+                    combines technical insight with a deep appreciation for heritage craft.</p>
+                  <p>She designs and makes jewelry inspired by heritage, blending traditional influences with
+                    contemporary expression. In addition to her own practice, she leads practical jewelry workshops that
+                    reconnect participants with traditional techniques and nurture their creativity.</p>
+                  <p>Her teaching blends problem-solving skills with hands-on creative approaches, inspiring students to
+                    explore new possibilities in material, process, and collaboration. Through her classroom and
+                    workshop practice, Somaya continues to champion the power of making as a means to foster engagement,
+                    innovation, and a deeper connection to heritage.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Signature Products</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Heritage Collections</span>
+                  <span class="product-tag">Workshop Pieces</span>
+                  <span class="product-tag">Educational Kits</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="shop.html?category=jewelry" class="btn btn-primary">View Products</a>
+                <button class="btn btn-secondary share-btn" data-artisan="somaya">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heba El Naggar -->
+          <div class="artisan-card" data-category="jewelry">
+            <div class="artisan-image">
+              <img src="assets/img/heba-jewelry.jpg" alt="Heba El Naggar"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Metal Engraving</span>
+                  <span class="specialty-tag">Storytelling</span>
+                  <span class="specialty-tag">Civilization Themes</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Heba El Naggar</h3>
+              <p class="artisan-title">Lawyer Turned Jewelry Artist</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>A lawyer who followed her childhood passion for colors and crafts. Creates jewelry that tells
+                    stories of civilizations through metal engraving and unique designs.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>Colors, drawing and handcrafting things in arts and fashion were my favorite hobbies since
+                    childhood. Although I have graduated with a university degree in Law, I have shifted my personal and
+                    professional life into my childhood passion.</p>
+                  <p>My fruitful and enjoyable journey into jewellery started almost ten years ago, driven by the desire
+                    to create inspired and unique pieces to reveal the civilizations. In fact, the work of art has a
+                    philosophical dimension which I embed through my handcrafted jewellery and accessories to be able to
+                    convey particular meanings or to tell a story.</p>
+                  <p>I believe that I am a gifted handcrafted maker by nature which I have enriched through continuous
+                    studies; Jewellery designs, Metal hand engraving, Jewellery by Wax and Jewellery making with metal
+                    (gold, silver and brass). My technical studies have been an eye opener to deliver state-of-art
+                    collections and pieces.</p>
+                  <p>Each piece I create is not just an accessory but a narrative—telling stories of ancient
+                    civilizations, personal journeys, or philosophical concepts through the medium of precious metals
+                    and stones.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Signature Products</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Engraved Jewelry</span>
+                  <span class="product-tag">Story Pieces</span>
+                  <span class="product-tag">Civilization Themes</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="shop.html?category=jewelry" class="btn btn-primary">View Products</a>
+                <button class="btn btn-secondary share-btn" data-artisan="heba-el-naggar">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heba Salloum -->
+          <div class="artisan-card" data-category="jewelry">
+            <div class="artisan-image">
+              <img src="assets/img/heba-salloum.jpg" alt="Heba Salloum"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Minimalist</span>
+                  <span class="specialty-tag">Elegant</span>
+                  <span class="specialty-tag">Emotional Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Heba Salloum</h3>
+              <p class="artisan-title">Jewelry Designer & Artist</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>Finds inspiration in everyday details, believing beauty lies in simplicity. Creates pieces that
+                    reflect her artistic soul and bring joy to those who wear them.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>I get inspiration from everything around me, every detail can spark a new design. I believe that
+                    beauty lies in simplicity, and I design with passion to turn ideas into pieces that reflect my
+                    artistic soul.</p>
+                  <p>Seeing my creations come to life as pieces that capture attention and touch people's hearts brings
+                    me joy. For me every design is a new journey that adds meaning and happiness to my creative path.
+                  </p>
+                  <p>My approach to jewelry design is deeply personal and intuitive. I don't follow trends but rather
+                    listen to the materials and let them guide the creative process. Each piece emerges organically,
+                    often surprising even me with its final form.</p>
+                  <p>The connection between maker and wearer is sacred to me. When someone chooses to wear my jewelry,
+                    they're not just accessorizing—they're carrying a piece of my artistic journey, my emotions, and my
+                    vision of beauty in simplicity.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Signature Products</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Minimalist Jewelry</span>
+                  <span class="product-tag">Everyday Wear</span>
+                  <span class="product-tag">Emotional Pieces</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="shop.html?category=jewelry" class="btn btn-primary">View Products</a>
+                <button class="btn btn-secondary share-btn" data-artisan="heba-salloum">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dina Otman -->
+          <div class="artisan-card" data-category="jewelry">
+            <div class="artisan-image">
+              <img src="assets/img/dina-jewelry.jpg" alt="Dina Otman"
+                onerror="this.src='assets/img/CIDCONews.jpg'">
+              <div class="artisan-overlay">
+                <div class="specialties">
+                  <span class="specialty-tag">Traditional Arts</span>
+                  <span class="specialty-tag">Islamic Art</span>
+                  <span class="specialty-tag">Contemporary Craft</span>
+                </div>
+              </div>
+            </div>
+            <div class="artisan-info">
+              <h3>Dina Otman</h3>
+              <p class="artisan-title">Handmade Jewelry Artist</p>
+
+              <div class="artisan-story">
+                <div class="story-preview">
+                  <p>A student of traditional arts at Beit Jameel School, studying contemporary Islamic art and jewelry
+                    making. Blends heritage techniques with modern expression.</p>
+                </div>
+                <button class="read-more-btn">Read Full Story <i class="fas fa-chevron-down"></i></button>
+                <div class="full-story">
+                  <p>Handmade jewelry artist studying at the Beit Jameel School of Traditional Arts and Crafts. Trained
+                    at the Jewelry Making Center of the Egyptian Ministry of Industry and currently pursuing a diploma
+                    in contemporary Islamic art with the Mamlouk Foundation.</p>
+                  <p>Dina represents the new generation of Egyptian artisans who are deeply rooted in traditional
+                    techniques while exploring contemporary expressions. Her work bridges the rich heritage of Islamic
+                    art with modern aesthetics, creating pieces that honor tradition while speaking to contemporary
+                    tastes.</p>
+                  <p>Through her studies at Beit Jameel and the Mamlouk Foundation, Dina has mastered traditional
+                    metalworking techniques while developing her unique artistic voice. Her jewelry often features
+                    geometric patterns, calligraphic elements, and symbolic motifs drawn from Egypt's rich artistic
+                    heritage.</p>
+                  <p>As a young artisan, Dina is passionate about preserving traditional crafts while making them
+                    relevant for today's world. Her work demonstrates how ancient techniques can be used to create
+                    modern, wearable art that carries cultural significance.</p>
+                </div>
+              </div>
+
+              <div class="artisan-products">
+                <h4>Signature Products</h4>
+                <div class="product-tags">
+                  <span class="product-tag">Islamic Art Jewelry</span>
+                  <span class="product-tag">Geometric Designs</span>
+                  <span class="product-tag">Calligraphic Pieces</span>
+                </div>
+              </div>
+
+              <div class="artisan-actions">
+                <a href="shop.html?category=jewelry" class="btn btn-primary">View Products</a>
+                <button class="btn btn-secondary share-btn" data-artisan="dina">
+                  <i class="fas fa-share-alt"></i> Share
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="artisans-stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-users"></i>
+            <div class="stat-content">
+              <h3>9</h3>
+              <p>Master Artisans</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-hands-helping"></i>
+            <div class="stat-content">
+              <h3>15+</h3>
+              <p>Years of Experience</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-medal"></i>
+            <div class="stat-content">
+              <h3>20+</h3>
+              <p>International Awards</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="stat-content">
+              <h3>50+</h3>
+              <p>Workshops Conducted</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="artisans-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Support Egyptian Craftsmanship</h2>
+          <p>Every purchase supports these talented artisans and helps preserve Egypt's rich craft heritage for future
+            generations.</p>
+          <div class="cta-buttons">
+            <a href="shop.html" class="btn btn-primary">Shop All Products</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Artisans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>SOUVENIR EGYPT</h3>
+            <p data-key="footer.description">Bringing authentic Egyptian handcrafts to the world. Each piece tells a
+              story of heritage, craftsmanship, and timeless beauty.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.shop">SHOP</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-key="categories.jewelry">Jewelry</a></li>
+              <li><a href="#" data-key="categories.pottery">Pottery</a></li>
+              <li><a href="#" data-key="categories.leather">Leather Products</a></li>
+              <li><a href="#" data-key="categories.rugs">Rugs & Kilims</a></li>
+              <li><a href="#" data-key="categories.cotton">Egyptian Cotton</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.help">HELP</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-key="footer.shipping">Shipping Information</a></li>
+              <li><a href="#" data-key="footer.returns">Returns & Exchanges</a></li>
+              <li><a href="#" data-key="footer.size">Size Guide</a></li>
+              <li><a href="#" data-key="footer.faq">FAQs</a></li>
+              <li><a href="#" data-key="footer.contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 data-key="footer.contact">CONTACT</h3>
+            <ul class="footer-links">
+              <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+              <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+              <li><i class="fas fa-envelope"></i> info@souveniregypt.store</li>
+            </ul>
+            <h3 style="margin-top: 1.5rem;" data-key="footer.payment">PAYMENT METHODS</h3>
+            <div class="payment-methods">
+              <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+              <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+              <div class="payment-icon"><i class="fab fa-cc-paypal"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/language-switcher-artisans.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/artisans.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+
+</html>

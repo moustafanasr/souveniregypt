@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SOUVENIR Egyptian Handcrafts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-text">SOUVENIR EGYPT.STORE</span>
+            <span class="logo-subtitle">Authentic Handcrafts</span>
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html" data-key="nav.home" class="nav-link">Home</a></li>
+            <li><a href="shop.html" data-key="nav.collections" class="nav-link">Collections</a></li>
+            <li><a href="artisans.html" data-key="nav.artisans" class="nav-link">Artisans</a></li>
+            <li><a href="about.html" data-key="nav.about" class="nav-link active">About</a></li>
+            <li><a href="contact.html" data-key="nav.contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Language Switcher -->
+          <div class="language-switcher-dropdown">
+            <button class="language-btn" id="languageToggle">
+              <span class="current-lang">EN</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown" id="languageDropdown">
+              <button class="lang-option active" data-lang="en">
+                <span class="lang-flag">🇺🇸</span>
+                <span class="lang-text">English</span>
+              </button>
+              <button class="lang-option" data-lang="it">
+                <span class="lang-flag">🇮🇹</span>
+                <span class="lang-text">Italiano</span>
+              </button>
+              <button class="lang-option" data-lang="fr">
+                <span class="lang-flag">🇫🇷</span>
+                <span class="lang-text">Français</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- User Account -->
+          <div class="user-dropdown">
+            <button class="user-btn" id="userToggle">
+              <i class="fas fa-user"></i>
+            </button>
+            <div class="user-menu" id="userMenu">
+              <div class="user-info">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                  <span class="user-name">Welcome Guest</span>
+                  <span class="user-status">Sign in to your account</span>
+                </div>
+              </div>
+              <div class="user-actions">
+                <a href="login.html" class="user-action-btn">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span data-key="nav.login">Login</span>
+                </a>
+                <a href="register.html" class="user-action-btn">
+                  <i class="fas fa-user-plus"></i>
+                  <span data-key="nav.register">Register</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shopping Cart -->
+          <div class="cart-dropdown">
+            <button class="cart-btn" id="cartToggle">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </button>
+            <div class="cart-preview" id="cartPreview">
+              <div class="cart-header">
+                <h4 data-key="nav.cart">Shopping Cart</h4>
+                <span class="cart-items-count">0 items</span>
+              </div>
+              <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+                <div class="empty-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                  <p data-key="nav.emptyCart">Your cart is empty</p>
+                </div>
+              </div>
+              <div class="cart-footer">
+                <div class="cart-total">
+                  <span data-key="nav.total">Total:</span>
+                  <span class="total-amount">$0.00</span>
+                </div>
+                <div class="cart-actions">
+                  <a href="cart.html" class="btn btn-secondary" data-key="nav.viewCart">View Cart</a>
+                  <a href="checkout.html" class="btn btn-primary" data-key="nav.checkout">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-key="about.hero.title">Our Story</h1>
+                <p data-key="about.hero.subtitle">Preserving Egyptian Heritage Through Authentic Handcrafts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 data-key="about.story.title">The Souvenir Egypt Journey</h2>
+                    <p data-key="about.story.p1">Founded in 2020, Souvenir Egypt Store began as a passion project to preserve and promote Egypt's rich artisanal heritage. What started as a small initiative to support local craftsmen has grown into a platform connecting master artisans with appreciative audiences worldwide.</p>
+                    <p data-key="about.story.p2">Our mission is simple yet profound: to safeguard traditional Egyptian crafts while providing sustainable livelihoods for artisans. Each piece in our collection represents centuries of skill, cultural significance, and personal stories of the hands that created them.</p>
+                    <p data-key="about.story.p3">We work directly with artisans across Egypt, from the bustling workshops of Cairo's Khan El Khalili to remote villages in Upper Egypt, ensuring fair compensation and preserving techniques passed down through generations.</p>
+                </div>
+                <div class="story-image">
+                    <img src="assets/img/heroBagckground.jpg" alt="Egyptian Craftsmanship" data-key="about.story.image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 data-key="about.mission.title">Our Mission</h3>
+                    <p data-key="about.mission.text">To preserve and promote authentic Egyptian craftsmanship while creating sustainable economic opportunities for artisans and sharing Egypt's cultural heritage with the world.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 data-key="about.vision.title">Our Vision</h3>
+                    <p data-key="about.vision.text">To become the global gateway to authentic Egyptian handcrafts, recognized for excellence in craftsmanship, cultural preservation, and ethical business practices.</p>
+                </div>
+                <div class="values-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 data-key="about.values.title">Our Values</h3>
+                    <p data-key="about.values.text">Authenticity, sustainability, craftsmanship, community empowerment, and cultural preservation guide everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Impact -->
+    <section class="our-impact">
+        <div class="container">
+            <h2 data-key="about.impact.title">Our Impact</h2>
+            <p class="impact-subtitle" data-key="about.impact.subtitle">Making a difference in the lives of Egyptian artisans and preserving cultural heritage</p>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label" data-key="about.impact.artisans">Artisans Supported</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="1000">0</div>
+                    <div class="stat-label" data-key="about.impact.products">Products Created</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-label" data-key="about.impact.countries">Countries Reached</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label" data-key="about.impact.workshops">Workshops Conducted</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="our-team">
+        <div class="container">
+            <h2 data-key="about.team.title">Meet Our Team</h2>
+            <p class="team-subtitle" data-key="about.team.subtitle">The passionate individuals behind Souvenir Egypt</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/img/HanyBarakat.jpg" alt="Hany Barakat">
+                    </div>
+                    <div class="member-info">
+                        <h3>Hany Barakat</h3>
+                        <p class="member-role" data-key="about.team.founder">Founder & Creative Director</p>
+                        <p class="member-bio" data-key="about.team.bio1">With over 15 years of experience in Egyptian crafts, Hany founded Souvenir Egypt to bridge traditional artisans with global markets.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/img/mobtada.jpg" alt="Sarah Mohamed">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Mohamed</h3>
+                        <p class="member-role" data-key="about.team.director">Artisan Relations Director</p>
+                        <p class="member-bio" data-key="about.team.bio2">Sarah works directly with artisans across Egypt, ensuring fair practices and helping develop new designs that honor tradition.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/img/LancheProject.jpg" alt="Ahmed Hassan">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ahmed Hassan</h3>
+                        <p class="member-role" data-key="about.team.quality">Quality Control Manager</p>
+                        <p class="member-bio" data-key="about.team.bio3">Ahmed ensures every piece meets our high standards of craftsmanship, working closely with artisans to perfect their techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 data-key="about.why.title">Why Choose Souvenir Egypt</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 data-key="about.why.authentic">Authentic Handcrafts</h3>
+                    <p data-key="about.why.authentic.desc">Every piece is genuinely handmade by skilled Egyptian artisans using traditional techniques.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-key="about.why.fair">Fair Trade Practices</h3>
+                    <p data-key="about.why.fair.desc">We ensure artisans receive fair compensation and work in safe, sustainable environments.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 data-key="about.why.delivery">Hotel Delivery</h3>
+                    <p data-key="about.why.delivery.desc">We deliver directly to your hotel in Egypt, making souvenir shopping convenient for travelers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-key="about.why.worldwide">Worldwide Shipping</h3>
+                    <p data-key="about.why.worldwide.desc">We ship globally, bringing authentic Egyptian crafts to your doorstep anywhere in the world.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 data-key="about.why.gifts">Perfect Gifts</h3>
+                    <p data-key="about.why.gifts.desc">Our pieces make unique, meaningful gifts that carry stories of Egyptian heritage.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3 data-key="about.why.heritage">Cultural Preservation</h3>
+                    <p data-key="about.why.heritage.desc">Your purchase helps preserve ancient crafts and support artisan communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="about-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-key="about.cta.title">Join Our Journey</h2>
+                <p data-key="about.cta.text">Every purchase supports Egyptian artisans and helps preserve our rich cultural heritage for future generations.</p>
+                <div class="cta-buttons">
+                    <a href="shop.html" class="btn btn-primary" data-key="about.cta.shop">Shop Collections</a>
+                    <a href="artisans.html" class="btn btn-secondary" data-key="about.cta.artisans">Meet Artisans</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SOUVENIR EGYPT</h3>
+                    <p data-key="footer.description">Bringing authentic Egyptian handcrafts to the world. Each piece tells a story of heritage, craftsmanship, and timeless beauty.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.shop">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=jewelry" data-key="categories.jewelry">Jewelry</a></li>
+                        <li><a href="shop.html?category=pottery" data-key="categories.pottery">Pottery</a></li>
+                        <li><a href="shop.html?category=leather" data-key="categories.leather">Leather Products</a></li>
+                        <li><a href="shop.html?category=rugs" data-key="categories.rugs">Rugs & Kilims</a></li>
+                        <li><a href="shop.html?category=cotton" data-key="categories.cotton">Egyptian Cotton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.help">HELP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-key="footer.shipping">Shipping Information</a></li>
+                        <li><a href="#" data-key="footer.returns">Returns & Exchanges</a></li>
+                        <li><a href="#" data-key="footer.size">Size Guide</a></li>
+                        <li><a href="#" data-key="footer.faq">FAQs</a></li>
+                        <li><a href="contact.html" data-key="footer.contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="footer.contact">CONTACT</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+                        <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@souveniregypt.store</li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;" data-key="footer.payment">PAYMENT METHODS</h3>
+                    <div class="payment-methods">
+                        <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-paypal"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Souvenir Egypt.Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/language-switcher-about.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
